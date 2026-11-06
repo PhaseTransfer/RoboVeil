@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Anonymous policy evaluation results.">
+  <title>RoboVeil · Leaderboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c3933'/%3E%3Ctext x='8' y='24' fill='white' font-size='24'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js?v=af79a901d02c" defer></script>
+</head>
+<body>
+  <header><span class="brand">RoboVeil</span><span class="preview-label">Preview</span></header>
+  <main>
+    <div class="leaderboard-heading">
+      <h1>Leaderboard</h1>
+      <div id="metric-switch" class="metric-switch" role="tablist" aria-label="Leaderboard metric" hidden>
+        <button id="sr-tab" type="button" role="tab" aria-selected="true" aria-controls="sr-panel">SR</button>
+        <button id="score-tab" type="button" role="tab" aria-selected="false" aria-controls="score-panel" tabindex="-1">Score</button>
+      </div>
+    </div>
+    <p id="status" class="muted" role="status">Loading results…</p>
+    <p id="error" role="alert" hidden></p>
+    <div id="app" hidden>
+      <section class="chart-section" aria-labelledby="chart-heading">
+        <div class="chart-heading">
+          <div>
+            <h2 id="chart-heading">Performance frontier</h2>
+          </div>
+          <div id="cost-switch" class="metric-switch" role="group" aria-label="Chart cost metric">
+            <button id="latency-button" type="button" aria-pressed="true">Inference latency</button>
+            <button id="rollout-button" type="button" aria-pressed="false">Average rollout length</button>
+          </div>
+        </div>
+        <figure class="chart-frame">
+          <div id="frontier-chart" class="chart-canvas" role="img"></div>
+          <div id="chart-legend" class="chart-legend" aria-label="Policy values"></div>
+        </figure>
+      </section>
+      <section id="score-panel" class="table-wrap" role="tabpanel" aria-labelledby="score-tab" hidden>
+        <table id="score-table">
+          <caption class="sr-only">Policy leaderboard ranked by score</caption>
+          <thead></thead><tbody></tbody>
+        </table>
+      </section>
+      <section id="sr-panel" class="table-wrap" role="tabpanel" aria-labelledby="sr-tab">
+        <table id="sr-table">
+          <caption class="sr-only">Policy leaderboard ranked by strict success rate</caption>
+          <thead></thead><tbody></tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer" aria-label="Contact">
+    <span class="footer-label">Contact</span>
+    <a href="mailto:PhaseTransfer@163.com">PhaseTransfer@163.com</a>
+    <span>RedNote: 5292792674</span>
+  </footer>
+</body>
+</html>
